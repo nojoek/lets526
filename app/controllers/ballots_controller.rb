@@ -1,4 +1,7 @@
 class BallotsController < ApplicationController
+  before_filter :find_user, except: [:new, :create, :index]
+   before_filter :authorize_user, only: [:show, :update, :destroy, :edit]
+  
   # GET /ballots
   # GET /ballots.json
   def index

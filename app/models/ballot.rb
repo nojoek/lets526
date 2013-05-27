@@ -10,7 +10,7 @@ validates :user, presence: true
   validate :user_cannot_vote_more_than_three_times
   
   def user_cannot_vote_more_than_three_times
-     if user.votes.count >= 3
+     if user.ballots.count >= 3
        errors.add(:user_id, "has already voted three times")
      end
    end
