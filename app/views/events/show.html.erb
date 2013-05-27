@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @event.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @event.description %>
+</p>
+
+<p>
+  <b>Settimeorloc:</b>
+  <%= @event.settimeorloc %>
+</p>
+
+<p>
+  <b>Finalloc:</b>
+  <%= @event.finalloc %>
+</p>
+
+<p>
+  <b>Finaltime:</b>
+  <%= @event.finaltime %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @event.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

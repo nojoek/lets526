@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Loc1:</b>
+  <%= @ballot.loc1 %>
+</p>
+
+<p>
+  <b>Loc2:</b>
+  <%= @ballot.loc2 %>
+</p>
+
+<p>
+  <b>Loc3:</b>
+  <%= @ballot.loc3 %>
+</p>
+
+<p>
+  <b>Loc4:</b>
+  <%= @ballot.loc4 %>
+</p>
+
+<p>
+  <b>Time1:</b>
+  <%= @ballot.time1 %>
+</p>
+
+<p>
+  <b>Time2:</b>
+  <%= @ballot.time2 %>
+</p>
+
+<p>
+  <b>Time3:</b>
+  <%= @ballot.time3 %>
+</p>
+
+<p>
+  <b>Time4:</b>
+  <%= @ballot.time4 %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @ballot.event_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @ballot.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_ballot_path(@ballot) %> |
+<%= link_to 'Back', ballots_path %>
