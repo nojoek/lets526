@@ -2,6 +2,18 @@ class BallotsController < ApplicationController
   before_filter :find_user, except: [:new, :create, :index]
    before_filter :authorize_user, only: [:show, :update, :destroy, :edit]
   
+   def find_user
+      @user = User.find_by_id(params[:id])
+    end
+
+    def authorize_user
+      if @user != current_user
+        redirect_to users_url, notice: "Nice try."
+      end
+     
+    
+    
+   end
   # GET /ballots
   # GET /ballots.json
   def index
@@ -83,4 +95,5 @@ class BallotsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end
